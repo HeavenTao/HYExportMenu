@@ -1,0 +1,990 @@
+[
+    {
+        "Access": true,
+        "Name": "点检管理",
+        "NavigateUrl": null,
+        "SubMenus": [
+            {
+                "Access": true,
+                "Name": "数据统计",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "全厂统计",
+                        "NavigateUrl": "~/areas/inspect/stat/MachStat.html",
+                        "SubMenus": [],
+                        "UniqueKey": "74E714431FA943DAAA8A713BE1991D8E",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "点检人员统计",
+                        "NavigateUrl": "~/areas/inspect/query/PatrollerStatic.html",
+                        "SubMenus": [],
+                        "UniqueKey": "A66746588FE0440A989FC486599796D3",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "点检执行情况",
+                        "NavigateUrl": "~/areas/inspect/query/MachineMonitor.html",
+                        "SubMenus": [],
+                        "UniqueKey": "0F604717269B4DF4BAC352DCA898F045",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "启停机管理",
+                        "NavigateUrl": "~/areas/machbase/machoff/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "C8529A31A66C49E7B97D6B61C087778E",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343164",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            },
+            {
+                "Access": true,
+                "Name": "标准管理",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "企标管理",
+                        "NavigateUrl": "~/areas/inspect/stdofmeas/QStdMgr.html",
+                        "SubMenus": [],
+                        "UniqueKey": "97EDD74C7D064FF8A73A5FBB7E5245F5",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "企标审核",
+                        "NavigateUrl": "~/areas/inspect/stdofmeas/QStdCheck.html",
+                        "SubMenus": [],
+                        "UniqueKey": "F0F47EB6F6A6401E8C8EBCCD465CECF2",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "执行标准管理",
+                        "NavigateUrl": "~/areas/inspect/stdofmeas/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "5E05FA08FD2B41EFB4FF3D4FDE02F8EF",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "执行标准审核",
+                        "NavigateUrl": "~/areas/inspect/stdofmeas/CheckIndex.html",
+                        "SubMenus": [],
+                        "UniqueKey": "ABFBD4EE552D4D94A18B7116092BB283",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "执行标准下发",
+                        "NavigateUrl": "~/areas/inspect/stdofmeas/OneKeySetList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "56F20C546B264F37BAD97D717E43A02D",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343165",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            },
+            {
+                "Access": true,
+                "Name": "点检管理",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "设备浏览",
+                        "NavigateUrl": "~/areas/inspect/machtree/NodeNavi.html",
+                        "SubMenus": [],
+                        "UniqueKey": "460536C22A484F59B266B4F89D3227B2",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "计划组态",
+                        "NavigateUrl": "~/areas/inspect/plan/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "A57B43CDC1104323939E6F6BFE07E00A",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "计划下载",
+                        "NavigateUrl": "~/areas/inspect/issues/Down.html",
+                        "SubMenus": [],
+                        "UniqueKey": "4B1989264CA244B8BA236111C0D05308",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "计划回收",
+                        "NavigateUrl": "~/areas/inspect/issues/Recive.html",
+                        "SubMenus": [],
+                        "UniqueKey": "2D1766C86A5A45A48D73B7376EA044D2",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "备机管理",
+                        "NavigateUrl": "~/areas/machbase/machoff/StandByIndex.html",
+                        "SubMenus": [],
+                        "UniqueKey": "FBF7DE28236E46919778C8784D0F21D0",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "违规管理",
+                        "NavigateUrl": "~/areas/inspect/anti/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "FEE5DBBDD3AD4A4DA9D34A49F7D2DEDD",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343166",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            },
+            {
+                "Access": true,
+                "Name": "报警管理",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "报警查询",
+                        "NavigateUrl": "~/areas/inspect/query/AlarmNavi.html",
+                        "SubMenus": [],
+                        "UniqueKey": "569D83743C234E508088DF7A339BFCED",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "报警确认",
+                        "NavigateUrl": "~/areas/inspect/alarmconfirm/UnConfirmIndex.html",
+                        "SubMenus": [],
+                        "UniqueKey": "327449F58FC04953BC62DC4575538BA8",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "报警审核",
+                        "NavigateUrl": "~/areas/inspect/alarmconfirm/ConfirmIndex.html",
+                        "SubMenus": [],
+                        "UniqueKey": "E8D4203DCBE2410FB84EC5CD328D700A",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "报警阈值导入",
+                        "NavigateUrl": "~/areas/measure/threshold/AlarmThreshold.html",
+                        "SubMenus": [],
+                        "UniqueKey": "A1EE124D96BE4DA49A48A2E220980849",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343167",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            },
+            {
+                "Access": true,
+                "Name": "基础数据",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "设备结构树",
+                        "NavigateUrl": "~/areas/inspect/machtree/Edit.html",
+                        "SubMenus": [],
+                        "UniqueKey": "BB294842A7F54C3EAFB2CEAC80B7FCFC",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "设备主次管理",
+                        "NavigateUrl": "~/areas/machbase/machimpo/MachImpoIndex.html",
+                        "SubMenus": [],
+                        "UniqueKey": "DBB04F1ECF2445D8A3E6BCC235BD25EE",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "设备等级管理",
+                        "NavigateUrl": "~/areas/machbase/machinelevel/MachineLevelList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "D96831E23F8B4D4797039F9561FCA7C4",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "设备类型管理",
+                        "NavigateUrl": "~/areas/machbase/machinetype/MachType.html",
+                        "SubMenus": [],
+                        "UniqueKey": "82822BDDCBC84F8D853D2969949DE6FF",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "区域类型管理",
+                        "NavigateUrl": "~/areas/machbase/workareatype/WorkAreaTypeList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "314DD46490CA455E912F993ACF311DAA",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "专业类型管理",
+                        "NavigateUrl": "~/areas/measure/spectype/SpecTypeList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "04115DB4976343418040F0340B755437",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "信号类型管理",
+                        "NavigateUrl": "~/areas/measure/signal/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "3CDC215906E5483E9D8573EC82B9E81C",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "观察量管理",
+                        "NavigateUrl": "~/areas/measure/signal/ObsMgr.html",
+                        "SubMenus": [],
+                        "UniqueKey": "48CF10E1F5A4482094D3A76C1FC1B74C",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "仪器管理",
+                        "NavigateUrl": "~/areas/measure/collector/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "25BF646FEB524C91AF251CA37205F71B",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "扩展属性",
+                        "NavigateUrl": "~/areas/measure/exprop/ExPropList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "B775561EB5E14F20B888E1196D9F6F05",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "轴承库管理",
+                        "NavigateUrl": "~/areas/measure/bearing/BearingList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "EF4D41F1E8974C559BED7EAD8102671E",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "特征频率管理",
+                        "NavigateUrl": "~/areas/measure/featurefreq/GroupList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "EFFFFCA90B074A80A9E40B6A5B62A5F3",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "启停机原因管理",
+                        "NavigateUrl": "~/areas/machbase/machoff/ReasonList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "1380AC758A594F32B92E1CDB3AE4596F",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "诊断助手",
+                        "NavigateUrl": "~/areas/inspect/examine/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "DE10E59CE6E3454DB773DF014966BE49",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "注释码管理",
+                        "NavigateUrl": "~/areas/inspect/notecode/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "B493A2899C6C46E8B4180E17130C276F",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "部件类型管理",
+                        "NavigateUrl": "~/areas/machbase/machpartstype/MachPartsTypeList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "3B1E5DB23C9846EDA583515185CB1417",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "RBD部件管理",
+                        "NavigateUrl": "~/areas/measure/partspoint/Edit.html",
+                        "SubMenus": [],
+                        "UniqueKey": "FDD31F6CCE1A441EAD45603EF46B36AD",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343168",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            },
+            {
+                "Access": true,
+                "Name": "数据查询分析",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "巡检数据分析",
+                        "NavigateUrl": "~/areas/analyze/AnalyzeView.html",
+                        "SubMenus": [],
+                        "UniqueKey": "5EC40E6F94704ED39EEFA2268D3BF8E4",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "巡检数据查询",
+                        "NavigateUrl": "~/areas/inspect/query/Patrol.html",
+                        "SubMenus": [],
+                        "UniqueKey": "C8DE7685F4FA45BA8F8EB8F019322FDA",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "波形数据查询",
+                        "NavigateUrl": "~/areas/inspect/query/Wave.html",
+                        "SubMenus": [],
+                        "UniqueKey": "19A0A869EA7F4469A92C005101FD0401",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "临时数据查询管理",
+                        "NavigateUrl": "~/areas/inspect/query/TmpPatrol.html",
+                        "SubMenus": [],
+                        "UniqueKey": "FD67F8983324402DBC5653CD0821336D",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "电子标签未触碰",
+                        "NavigateUrl": "~/areas/inspect/query/EmarkTouch.html",
+                        "SubMenus": [],
+                        "UniqueKey": "475713C4D1E049B1A78CFBFDEF3779C0",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "设备查询",
+                        "NavigateUrl": "~/areas/machbase/machine/MachQuery.html",
+                        "SubMenus": [],
+                        "UniqueKey": "23CE3ACCD6794965A428B21D7FC1A1B5",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "位置查询",
+                        "NavigateUrl": "~/areas/measure/location/LocQuery.html",
+                        "SubMenus": [],
+                        "UniqueKey": "D588CDED64C743288C976B5872817029",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "测点查询",
+                        "NavigateUrl": "~/areas/measure/point/PointQuery.html",
+                        "SubMenus": [],
+                        "UniqueKey": "C636608369F74276836839C2CA8F3349",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "历史数据管理",
+                        "NavigateUrl": "~/areas/inspect/history/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "0E96F2EB42544990821B38FA5C2FDD03",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "动平衡报告",
+                        "NavigateUrl": "~/areas/inspect/query/DynBalance.html",
+                        "SubMenus": [],
+                        "UniqueKey": "FD9EBC61FB4A48DEA5472C5D32C70C07",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "违规查询",
+                        "NavigateUrl": "~/areas/inspect/query/AntiRuleQuery.html",
+                        "SubMenus": [],
+                        "UniqueKey": "2D8D368CAAE74EA8B91864321120C808",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "计划查询",
+                        "NavigateUrl": "~/areas/inspect/query/PlanQuery.html",
+                        "SubMenus": [],
+                        "UniqueKey": "1F1D5BBF21004C53BF988E936C5C4EA5",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "最新巡检数据",
+                        "NavigateUrl": "~/areas/inspect/query/LatestPatrol.html",
+                        "SubMenus": [],
+                        "UniqueKey": "E2BF7854013E4FE39E3B31E9121AFEE6",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "注释码历史数据",
+                        "NavigateUrl": "~/areas/inspect/query/HistoryNoteCodeIndex.html",
+                        "SubMenus": [],
+                        "UniqueKey": "B29464A7FEA14D7383BF2BE595FD9190",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "漏检计划查询",
+                        "NavigateUrl": "~/areas/inspect/query/UndetectedPlan.html",
+                        "SubMenus": [],
+                        "UniqueKey": "6F95A97B020D4EE28781DA3CB3B135EA",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343169",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            }
+        ],
+        "UniqueKey": "527765581343142",
+        "IsDefault": false,
+        "NewPage": 0,
+        "Icon": null
+    },
+    {
+        "Access": true,
+        "Name": "运维管理",
+        "NavigateUrl": null,
+        "SubMenus": [
+            {
+                "Access": true,
+                "Name": "缺陷管理",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "缺陷导航",
+                        "NavigateUrl": "~/areas/defecttrace/defect/index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "508C0F51741C4575B74B7D80658CC06F",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "缺陷总览",
+                        "NavigateUrl": "~/areas/defecttrace/defect/allview.html",
+                        "SubMenus": [],
+                        "UniqueKey": "FAE281C684964CCB8C47383A362EA3A5",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "缺陷新增",
+                        "NavigateUrl": "~/areas/defecttrace/defect/Edit.html",
+                        "SubMenus": [],
+                        "UniqueKey": "6A9F258D425A4777BC8B664EFD89FB55",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "缺陷确认",
+                        "NavigateUrl": "~/areas/defecttrace/defect/ListDefectConfirm.html",
+                        "SubMenus": [],
+                        "UniqueKey": "62B25815BBE64CE09110F0D2BF424818",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "缺陷分派",
+                        "NavigateUrl": "~/areas/defecttrace/defect/ListDefectAllot.html",
+                        "SubMenus": [],
+                        "UniqueKey": "7D8E2F72D0574BE2AB08B635AD70EA1E",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "缺陷反馈",
+                        "NavigateUrl": "~/areas/defecttrace/defect/listfeedback.html",
+                        "SubMenus": [],
+                        "UniqueKey": "E744BE3F91DF490F85F8F87F5DE11A9B",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "缺陷验证",
+                        "NavigateUrl": "~/areas/defecttrace/defect/listreformcheck.html",
+                        "SubMenus": [],
+                        "UniqueKey": "00FCBDA568EC47A1890E37B7368A4A39",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "缺陷查询",
+                        "NavigateUrl": "~/areas/defecttrace/defect/defectquery.html",
+                        "SubMenus": [],
+                        "UniqueKey": "D6BAFEDA496F480DB430AB336F5E6364",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "缺陷补录",
+                        "NavigateUrl": "~/areas/defecttrace/defect/defectrecord.html",
+                        "SubMenus": [],
+                        "UniqueKey": "CD76935BFC4C446DA711AFD151D83777",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343400",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            }
+        ],
+        "UniqueKey": "527765581343143",
+        "IsDefault": false,
+        "NewPage": 0,
+        "Icon": null
+    },
+    {
+        "Access": true,
+        "Name": "状态监测",
+        "NavigateUrl": null,
+        "SubMenus": [
+            {
+                "Access": true,
+                "Name": "实时监控",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "设备浏览",
+                        "NavigateUrl": "~/areas/inspect/machtree/NodeNavi.html",
+                        "SubMenus": [],
+                        "UniqueKey": "EA44CDD7DDDE432E80E17B04CE0898D0",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343170",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            },
+            {
+                "Access": true,
+                "Name": "分析诊断",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "诊断助手",
+                        "NavigateUrl": "~/areas/inspect/examine/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "3C6578C6687E49F89E2307CDF2D30E23",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343171",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            },
+            {
+                "Access": true,
+                "Name": "数据挖掘",
+                "NavigateUrl": "",
+                "SubMenus": [],
+                "UniqueKey": "527765581343172",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            },
+            {
+                "Access": true,
+                "Name": "往复机械故障定位",
+                "NavigateUrl": "",
+                "SubMenus": [],
+                "UniqueKey": "527765581343173",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            },
+            {
+                "Access": true,
+                "Name": "在线监测组态",
+                "NavigateUrl": "",
+                "SubMenus": [],
+                "UniqueKey": "527765581343174",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            }
+        ],
+        "UniqueKey": "527765581343144",
+        "IsDefault": false,
+        "NewPage": 0,
+        "Icon": null
+    },
+    {
+        "Access": true,
+        "Name": "文档管理",
+        "NavigateUrl": null,
+        "SubMenus": [
+            {
+                "Access": true,
+                "Name": "文档管理",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "文件浏览",
+                        "NavigateUrl": "~/areas/docsystem/folder/BrowseIndex.html",
+                        "SubMenus": [],
+                        "UniqueKey": "D90ECAEA5B194822871F475F35D896AD",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "文件管理",
+                        "NavigateUrl": "~/areas/docsystem/folder/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "9697651ACB9E4633B7FCC1F178B2DED6",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "文件夹类型管理",
+                        "NavigateUrl": "~/areas/docsystem/foldertype/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "7B5DFDD4728E42979C9D5C6A4E36ECB9",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "文件类型管理",
+                        "NavigateUrl": "~/areas/docsystem/filetype/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "F93B612F662B44B597FFC247DCB34F66",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343163",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            }
+        ],
+        "UniqueKey": "527765581343141",
+        "IsDefault": false,
+        "NewPage": 0,
+        "Icon": null
+    },
+    {
+        "Access": true,
+        "Name": "后台管理",
+        "NavigateUrl": null,
+        "SubMenus": [
+            {
+                "Access": true,
+                "Name": "基础数据",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "部门管理",
+                        "NavigateUrl": "~/areas/sysbase/department/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "AF23FFE863B54A678E09B49D39BFDD50",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "菜单配置",
+                        "NavigateUrl": "~/areas/sysbase/syscfg/menucfg.html",
+                        "SubMenus": [],
+                        "UniqueKey": "949C7F65AAA24385A6D10B0FE026E2A8",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "用户管理",
+                        "NavigateUrl": "~/areas/sysbase/user/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "62279837F6C146CF94E3FA3C0EA841DC",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "角色管理",
+                        "NavigateUrl": "~/areas/sysbase/role/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "5FD4B309221A494E911A90EC6A3D1D5F",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "操作权限点",
+                        "NavigateUrl": "~/areas/sysbase/syscfg/FuncList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "55FBEB84383A43EB88D1156F8C4F5594",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "操作权限配置",
+                        "NavigateUrl": "~/areas/sysbase/syscfg/PermissionList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "337E5900F9E44E6B983E6E4ADBDDBBD3",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "操作名称管理",
+                        "NavigateUrl": "~/areas/sysbase/syscfg/OperateList.html",
+                        "SubMenus": [],
+                        "UniqueKey": "F2E8ADEC2CFE49C78E1EAACCB8982033",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    },
+                    {
+                        "Access": true,
+                        "Name": "节点权限管理",
+                        "NavigateUrl": "~/areas/machbase/usermachineaccess/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "EC814C3A1A6B4258A8A45CFCE2A031F8",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343160",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            },
+            {
+                "Access": true,
+                "Name": "系统日志",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "操作日志管理",
+                        "NavigateUrl": "~/areas/sysbase/operatelog/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "74EA611299994337BEA84D7A2F57C3BC",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343161",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            },
+            {
+                "Access": true,
+                "Name": "系统配置",
+                "NavigateUrl": "",
+                "SubMenus": [
+                    {
+                        "Access": true,
+                        "Name": "文档管理系统配置",
+                        "NavigateUrl": "~/areas/docsystem/setting/Index.html",
+                        "SubMenus": [],
+                        "UniqueKey": "C771985096314707908B4C002B2BE652",
+                        "IsDefault": false,
+                        "NewPage": 0,
+                        "Icon": ""
+                    }
+                ],
+                "UniqueKey": "527765581343162",
+                "IsDefault": false,
+                "NewPage": 0,
+                "Icon": ""
+            }
+        ],
+        "UniqueKey": "527765581343140",
+        "IsDefault": false,
+        "NewPage": 0,
+        "Icon": "mdi-database-cog"
+    }
+]
