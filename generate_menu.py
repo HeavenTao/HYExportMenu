@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 """
-根据menu.json生成Excel文件，参照模板.xlsx的格式
+根据menu.json生成Excel文件
 支持单元格合并，过滤无url的行，文本左对齐垂直居中
+一级菜单包含图标（与名称换行显示）
 """
 import json
-import openpyxl
 from openpyxl import Workbook
-from openpyxl.cell.cell import MergedCell
-from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
-from copy import copy
+from openpyxl.styles import Font, Alignment
 
 
 # 全局对齐样式：水平居左，垂直居中
 CELL_ALIGNMENT = Alignment(horizontal='left', vertical='center')
+# 表头样式
+HEADER_ALIGNMENT = Alignment(horizontal='left', vertical='center')
 
 
 def load_menu_data(filepath):
@@ -21,42 +21,28 @@ def load_menu_data(filepath):
         return json.load(f)
 
 
-def copy_cell_style(src_cell, dst_cell):
-    """复制单元格样式，并覆盖对齐方式"""
-    if src_cell.has_style:
-        dst_cell.font = copy(src_cell.font)
-        dst_cell.fill = copy(src_cell.fill)
-        # 使用自定义对齐方式
-        dst_cell.alignment = CELL_ALIGNMENT
-        dst_cell.border = copy(src_cell.border)
-        dst_cell.number_format = copy(src_cell.number_format)
-
-
-def copy_worksheet_format(src_ws, dst_ws):
-    """复制工作表的格式（列宽、行高等）"""
-    # 复制列宽
-    for col_letter, col_dim in src_ws.column_dimensions.items():
-        if col_dim.width:
-            dst_ws.column_dimensions[col_letter].width = col_dim.width
+def get_first_level_display(first_level):
+    """获取一级菜单显示文本（名称+图标，换行）"""
+    name = first_level.get('Name', '')
+    icon = first_level.get('Icon')
     
-    # 复制行高
-    for row_num, row_dim in src_ws.row_dimensions.items():
-        if row_dim.height:
-            dst_ws.row_dimensions[row_num].height = row_dim.height
+    if icon and str(icon).strip():
+        return f"{name}\n{icon}"
+    return name
 
 
 def generate_menu_data(menu_data):
     """
     根据menu.json生成菜单数据，过滤掉没有url地址的行
     返回:
-        rows: 列表，每个元素是 (一级菜单名, 二级菜单名, 三级菜单名, 地址)
-        first_merges: 一级菜单合并范围 [(菜单名, 起始行, 结束行), ...]
+        rows: 列表，每个元素是 (一级菜单显示文本, 二级菜单名, 三级菜单名, 地址)
+        first_merges: 一级菜单合并范围 [(显示文本, 起始行, 结束行), ...]
         second_merges: 二级菜单合并范围 [(菜单名, 起始行, 结束行), ...]
     """
     rows = []
     
     for first_level in menu_data:
-        first_name = first_level.get('Name', '')
+        first_display = get_first_level_display(first_level)
         second_menus = first_level.get('SubMenus', [])
         
         for second_level in second_menus:
@@ -69,7 +55,7 @@ def generate_menu_data(menu_data):
                 
                 # 只保留有url的行（非空字符串且非None）
                 if url and url.strip():
-                    rows.append((first_name, second_name, third_name, url))
+                    rows.append((first_display, second_name, third_name, url))
     
     # 计算合并范围
     first_merges = []
@@ -112,38 +98,46 @@ def generate_menu_data(menu_data):
     return rows, first_merges, second_merges
 
 
-def set_cell_value(ws, row, col, value):
+def set_cell_value(ws, row, col, value, font=None):
     """设置单元格值和对齐方式"""
     cell = ws.cell(row=row, column=col, value=value)
     cell.alignment = CELL_ALIGNMENT
+    if font:
+        cell.font = font
     return cell
 
 
-def create_excel(menu_data, template_path, output_path):
-    """创建Excel文件"""
-    # 加载模板
-    template_wb = openpyxl.load_workbook(template_path)
-    template_ws = template_wb.active
+def setup_worksheet(ws):
+    """设置工作表格式"""
+    # 设置列宽
+    ws.column_dimensions['A'].width = 18
+    ws.column_dimensions['B'].width = 22
+    ws.column_dimensions['C'].width = 47
+    ws.column_dimensions['D'].width = 66
+    ws.column_dimensions['E'].width = 48
     
+    # 设置说明行
+    ws.merge_cells('A1:C1')
+    cell = ws.cell(row=1, column=1, value='说明：绿色标注为要部署的菜单')
+    cell.alignment = CELL_ALIGNMENT
+    
+    # 设置表头
+    headers = ['一级菜单', '二级菜单', '三级菜单', '地址']
+    for col, header in enumerate(headers, start=1):
+        cell = ws.cell(row=2, column=col, value=header)
+        cell.alignment = HEADER_ALIGNMENT
+        cell.font = Font(bold=True)
+
+
+def create_excel(menu_data, output_path):
+    """创建Excel文件"""
     # 创建新的工作簿
     wb = Workbook()
     ws = wb.active
-    ws.title = template_ws.title
+    ws.title = 'Sheet1'
     
-    # 复制工作表格式
-    copy_worksheet_format(template_ws, ws)
-    
-    # 复制说明行和表头行（处理合并单元格）
-    for row_idx in range(1, 3):
-        for col_idx in range(1, template_ws.max_column + 1):
-            src_cell = template_ws.cell(row=row_idx, column=col_idx)
-            dst_cell = ws.cell(row=row_idx, column=col_idx)
-            if not isinstance(dst_cell, MergedCell):
-                dst_cell.value = src_cell.value
-                copy_cell_style(src_cell, dst_cell)
-    
-    # 复制说明行的合并单元格 A1:C1
-    ws.merge_cells('A1:C1')
+    # 设置工作表格式
+    setup_worksheet(ws)
     
     # 生成菜单数据
     rows, first_merges, second_merges = generate_menu_data(menu_data)
@@ -165,19 +159,6 @@ def create_excel(menu_data, template_path, output_path):
         if end_row > start_row:
             ws.merge_cells(start_row=start_row, start_column=2, end_row=end_row, end_column=2)
     
-    # 如果有Sheet2，复制它
-    if 'Sheet2' in template_wb.sheetnames:
-        template_ws2 = template_wb['Sheet2']
-        ws2 = wb.create_sheet(title='Sheet2')
-        copy_worksheet_format(template_ws2, ws2)
-        for row_idx in range(1, template_ws2.max_row + 1):
-            for col_idx in range(1, template_ws2.max_column + 1):
-                src_cell = template_ws2.cell(row=row_idx, column=col_idx)
-                dst_cell = ws2.cell(row=row_idx, column=col_idx)
-                if not isinstance(dst_cell, MergedCell):
-                    dst_cell.value = src_cell.value
-                    copy_cell_style(src_cell, dst_cell)
-    
     # 保存文件
     wb.save(output_path)
     print(f"Excel文件已生成: {output_path}")
@@ -188,7 +169,7 @@ def create_excel(menu_data, template_path, output_path):
 
 def main():
     menu_data = load_menu_data('menu.json')
-    create_excel(menu_data, '模板.xlsx', '菜单导出.xlsx')
+    create_excel(menu_data, '菜单导出.xlsx')
 
 
 if __name__ == '__main__':
